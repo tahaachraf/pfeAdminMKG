@@ -62,7 +62,7 @@ export default function ModeleForm() {
     }
     setSaving(true);
     try {
-      const payload = { nom: formData.nom, slug: formData.slug, idMarque: formData.idMarque };
+      const payload = { nom: formData.nom, slug: formData.slug, marque: formData.idMarque };
       if (isNew) {
         await api.post("/models", payload);
         toast({ title: "Succès", description: "Modèle créé avec succès" });
